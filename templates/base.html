@@ -1,0 +1,34 @@
+<!-- ---------------------------------------- [edit] ---------------------------------------- -->
+{% load static %}
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <title>Hello, pybo!</title>
+
+    <!-- jquery -->
+    <script src="{% static 'jquery-3.5.1.min.js' %}"></script>
+    <!-- Bootstrap JS-->
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+    <!-- 페이지마다 필요한 jquery스크립트를 위한 block-->
+    {% block script %}
+    {% endblock %}
+</head>
+<body>
+<!-- 간단하게 그냥 아파치 템플릿 생각하면 맘 편함 ㅇㅇ -->
+
+{% include "navbar.html" %}
+
+<!-- 기본 템플릿 안에 삽입될 내용 Start -->
+{% block content %}
+{% endblock %}
+<!-- 기본 템플릿 안에 삽입될 내용 End -->
+
+</body>
+</html>
+<!-- ---------------------------------------------------------------------------------------- -->
